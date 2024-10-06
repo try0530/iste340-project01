@@ -1,0 +1,85 @@
+{
+  "title": "Find Out What Kind of Activity You Might Be Interested In!!",
+  "q1": {
+    "question": "Which place do you want to do the activity?",
+    "id": "q1",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "outdoor": { "value": "outdoor", "text": "Outdoor", "next": "q2" },
+      "indoor": { "value": "indoor", "text": "Indoor", "next": "q3" }
+    }
+  },
+  "q2": {
+    "question": "what environment interested you most?",
+    "id": "q2",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "mountain": { "value": "mountain", "text": "Mountain", "next": "q4" },
+      "water": { "value": "water", "text": "Water", "next": "q5" },
+      "theme-park": {
+        "value": "theme-park",
+        "text": "Theme Park",
+        "next": null
+      }
+    }
+  },
+  "q3": {
+    "question": "Which stuff interested you most?",
+    "id": "q3",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "computer": { "value": "computer", "text": "Computer", "next": "q6" },
+      "animals": { "value": "animals", "text": "Animals", "next": null },
+      "handmade": { "value": "handmade", "text": "Hand Made", "next": null },
+      "book": { "value": "book", "text": "Book", "next": "q7" }
+    }
+  },
+  "q4": {
+    "question": "Chill or Advanced?",
+    "id": "q4",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "chill": { "value": "chill", "text": "Chill", "next": null },
+      "advanced": { "value": "advanced", "text": "Advanced", "next": null }
+    }
+  },
+  "q5": {
+    "question": "Underwater or Overwater?",
+    "id": "q5",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "underwater": {
+        "value": "underwater",
+        "text": "Underwater",
+        "next": null
+      },
+      "overwater": { "value": "overwater", "text": "Overwater", "next": null }
+    }
+  },
+  "q6": {
+    "question": "Challenge or Chill?",
+    "id": "q6",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "challenge": { "value": "challenge", "text": "Challenge", "next": null },
+      "chill": { "value": "chill", "text": "Chill", "next": null }
+    }
+  },
+  "q7": {
+    "question": "What type of book do you like?",
+    "id": "q7",
+    "options": {
+      "default": { "value": "default", "text": "Please choose an option" },
+      "heartwarming": {
+        "value": "heartwarming",
+        "text": "Heartwarming",
+        "next": null
+      },
+      "fantasy": { "value": "fantasy", "text": "Fantasy", "next": null },
+      "mystery": { "value": "mystery", "text": "Mystery", "next": null },
+      "sci-fi": { "value": "sci-fi", "text": "Sci-fi", "next": null },
+      "comics": { "value": "comics", "text": "Comics", "next": null },
+      "others": { "value": "others", "text": "Others", "next": null }
+    }
+  }
+}

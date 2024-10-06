@@ -1,0 +1,12 @@
+{
+  "f1": {
+    "label": { "for": "username", "text": "Your Name: " },
+    "input": { "type": "text", "id": "username", "name": "username" },
+    "require": true
+  },
+  "f2": {
+    "label": { "for": "email", "text": "Email: " },
+    "input": { "type": "email", "id": "email", "name": "email" },
+    "require": false
+  }
+}

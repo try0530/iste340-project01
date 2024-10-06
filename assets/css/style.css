@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+:root {
+  --color-01: #374375;
+  --color-02: #fffcf5;
+  --color-03: #babde2;
+  --color-04: #895159;
+  --color-05: #dfaea1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-02);
+  font-family: "Titillium Web", "Nunito", sans-serif;
+  /* border: 1px solid black; */
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/****** Questions Settings Begin *******/
+select,
+option {
+  background-color: var(--color-01);
+  color: var(--color-02);
+  border-radius: 16px;
+  /* margin: 0.5rem; */
+  padding: 1rem;
+  border: 0;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
+/* question block */
+#questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#questions h2,
+#result h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.question {
+  color: var(--color-02);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 20rem;
+  background: rgba(55, 61, 117, 0.7);
+  position: relative;
+}
+
+.question::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 95%;
+  height: 90%;
+  border: 2px dashed var(--color-05);
+  box-sizing: border-box;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.question p {
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/******* FORM ********/
+#user-form {
+  /* display: flex; */
+  align-items: center;
+  color: var(--color-02);
+}
+
+#user-form label,
+#user-form input {
+  margin: 5px;
+}
+
+.question h3,
+.question form,
+.question form label {
+  background-color: transparent;
+}
+
+.question form input {
+  border: none;
+}
+
+#form-submit {
+  padding: 0.7rem;
+  border-radius: 16px;
+  color: var(--color-02);
+  background-color: var(--color-01);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#form-submit:hover {
+  color: var(--color-02);
+  background-color: var(--color-04);
+  box-shadow: 0 3px;
+}
+
+#form-submit:active {
+  transform: scale(1.2);
+  color: var(--color-02);
+  background-color: var(--color-04);
+  box-shadow: 0 1px;
+  transform: translateY(4px);
+}
+
+/* form validation error setting start */
+.form-error {
+  background-color: var(--color-04);
+}
+
+#error-message {
+  color: var(--color-02);
+  background-color: var(--color-04);
+  border-radius: 16px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+/* form validation error setting end */
+
+/* result setting start */
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+#result-detail::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 95%;
+  height: 90%;
+  border: 2px dashed var(--color-05);
+  box-sizing: border-box;
+  pointer-events: none;
+  border-radius: 10px;
+} */
+
+#result-detail {
+  width: 85%;
+  margin-top: 1rem;
+  border: 2px solid var(--color-05);
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+#result-basic-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#selected-list-ul li {
+  text-align: center;
+}
+
+#selected-list-div {
+  border: 2px solid var(--color-05);
+  margin: 0.5rem;
+  border-radius: 4px;
+}
+
+#selected-list-div h3 {
+  padding: 0 1rem;
+  text-decoration: underline;
+  text-decoration-color: var(--color-04);
+}
+
+#result-recommend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dotted var(--color-03);
+}
+
+#result-recommend p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+#recommend-description {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-top: 1px dotted var(--color-01);
+  border-bottom: 1px dotted var(--color-01);
+}
+
+#recommend-description h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--color-04);
+}
+
+#recommend-other-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+#other-links {
+  display: flex;
+  flex-direction: column;
+}
+
+#other-links a {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--color-04);
+  color: var(--color-02);
+  border-radius: 8px;
+  text-align: center;
+}
+
+#recommend-other-details button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--color-01);
+  color: var(--color-02);
+  border-radius: 8px;
+  text-align: center;
+  border: 0;
+}
+
+/* result setting end */
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #result {
+    margin-top: 1rem;
+  }
+
+  #recommend-other-details {
+    display: flex;
+    flex-direction: column;
+  }
+}

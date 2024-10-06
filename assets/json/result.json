@@ -1,0 +1,448 @@
+{
+  "outdoor": {
+    "mountain": {
+      "chill": {
+        "result": {
+          "trail": { "text": "trail", "desc": "Desc" },
+          "horseriding": { "text": "Horse Riding", "desc": "DESC" }
+        }
+      },
+      "advanced": {
+        "result": {
+          "hiking": { "text": "hiking" },
+          "rockclimbing": {
+            "text": "rock climbing",
+            "img": { "src": "./assets/img/rock-climbing.jpeg" }
+          }
+        }
+      }
+    },
+    "water": {
+      "underwater": {
+        "result": {
+          "scuba": {
+            "text": "Scuba Diving",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/scubadiving.jpeg" },
+            "link": {}
+          },
+          "free": {
+            "text": "Freediving",
+            "desc": "Desc",
+            "img": {
+              "src": "./assets/img/freediving.jpg"
+            },
+            "link": {}
+          },
+          "sharkcage": {
+            "text": "Shark Cage Diving",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/shark-cage-diving.jpg" },
+            "link": {}
+          }
+        }
+      },
+      "overwater": {
+        "result": {
+          "surfing": {
+            "text": "Surfing",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/surfing.jpg" },
+            "link": {}
+          },
+          "skimboard": {
+            "text": "Skimboard",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/skimboarding.jpg" },
+            "link": {}
+          },
+          "wakeboard": {
+            "text": "Wake Board",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/wakeboarding.jpg" },
+            "link": {}
+          }
+        }
+      }
+    },
+    "theme-park": {
+      "result": {
+        "universal": {
+          "text": "Universal Studio",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/universal-studio.jpg" },
+          "link": {
+            "link1": {
+              "href": "https://www.universalorlando.com/web/en/us",
+              "linktext": "Universal Orlando"
+            },
+            "link2": {
+              "href": "https://www.universalstudioshollywood.com/web/en/us",
+              "linktext": "Universal Hollywood"
+            }
+          }
+        },
+        "disney": {
+          "text": "Disneyland",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/disneyland.jpg" },
+          "link": {
+            "link1": {
+              "href": "https://disneyworld.disney.go.com/",
+              "linktext": "Disneyworld Orlando"
+            },
+            "link2": {
+              "href": "https://disneyland.disney.go.com/",
+              "linktext": "Disneyland California"
+            }
+          }
+        }
+      }
+    }
+  },
+  "indoor": {
+    "computer": {
+      "challenge": {
+        "result": {
+          "videogame": {
+            "text": "Video Game",
+            "desc": "Desc"
+          }
+        }
+      },
+      "chill": {
+        "result": {
+          "watchanimate": {
+            "text": "Watch Animation",
+            "desc": "Desc"
+          }
+        }
+      }
+    },
+    "animals": {
+      "result": {
+        "catcafe": {
+          "text": "Cat Cafe",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/cat-cafe.jpeg" },
+          "link": {
+            "link1": {
+              "href": "https://www.pawsitivecatcafe.com/",
+              "linktext": "Pawsitive Cat Cafe"
+            },
+            "link2": {
+              "href": "https://lazycatloungeandcafe.com/",
+              "linktext": "Lazy Cat Lounge and Cafe"
+            }
+          }
+        },
+        "aquarium": {
+          "text": "Aquarium",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/aquarium.jpg" },
+          "link": {}
+        }
+      }
+    },
+    "handmade": {
+      "result": {
+        "soap": {
+          "text": "Soap",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/handmade-soap.jpeg" },
+          "link": {}
+        },
+        "candle": {
+          "text": "Candle",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/handmade-candle.jpeg" },
+          "link": {}
+        },
+        "bracelet": {
+          "text": "Bracelet",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/handmade-bracelet.jpg" },
+          "link": {}
+        },
+        "knitting": {
+          "text": "Knitting",
+          "desc": "Desc",
+          "img": { "src": "./assets/img/handmade-knitting.jpeg" },
+          "link": {}
+        }
+      }
+    },
+    "book": {
+      "heartwarming": {
+        "result": {
+          "book01": {
+            "text": "I want to Eat Your Pancreas",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/book01.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Want-Your-Pancreas-Light-Novel/dp/1642750336",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt7236034/",
+                "linktext": "Movie Info"
+              }
+            }
+          },
+          "book02": {
+            "text": "I Had That Same Dream Again",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/book02.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/That-Same-Dream-Again-Novel/dp/164505439X",
+                "linktext": "Buy this book!"
+              }
+            }
+          },
+          "book03": {
+            "text": "Wood Job!",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/book03.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/%E5%93%AA%E5%95%8A%E5%93%AA%E5%95%8A-%E7%A5%9E%E5%8E%BB%E6%9D%91-Miura-Shion/dp/9868703611",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt2964120/",
+                "linktext": "Movie Info"
+              }
+            }
+          },
+          "book04": {
+            "text": "My Sister's Keeper",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/book04.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/My-Sisters-Keeper/dp/B00854F69I",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt1078588/",
+                "linktext": "Movie Info"
+              }
+            }
+          }
+        }
+      },
+      "fantasy": {
+        "result": {
+          "book01": {
+            "text": "Dune",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/fantasy-book01.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Complete-Messiah-Children-Heretics-Chapterhouse/dp/B07WDM3D5T",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt1160419/",
+                "linktext": "Dune: Part One (Movie)"
+              },
+              "link3": {
+                "href": "https://www.imdb.com/title/tt15239678/",
+                "linktext": "Dune: Part Two (Movie)"
+              }
+            }
+          }
+        }
+      },
+      "mystery": {
+        "result": {
+          "book01": {
+            "text": "Agatha Christie Novels",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/mystery-book01.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.kobo.com/us/en/ebook/the-complete-miss-marple-collection",
+                "linktext": "Buy this series!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/list/ls097954792/",
+                "linktext": "Movies List"
+              }
+            }
+          },
+          "book02": {
+            "text": "Millennium",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/mystery-book02.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Millennium-Books-Collection-Stieg-Larsson/dp/1529412544",
+                "linktext": "Buy this series!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/list/ls024591042/",
+                "linktext": "Movies List"
+              }
+            }
+          },
+          "book03": {
+            "text": "Skumtimmen",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/mystery-book03.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Echoes-Oland-Quartet-Johan-Theorin/dp/0385342217",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt2425852/",
+                "linktext": "Movie Info"
+              }
+            }
+          },
+          "book04": {
+            "text": "Where the Crawdads Sing",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/mystery-book04.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Where-Crawdads-Sing-Delia-Owens/dp/0735219095",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt9411972/",
+                "linktext": "Movie Info"
+              }
+            }
+          }
+        }
+      },
+      "sci-fi": {
+        "result": {
+          "book01": {
+            "text": "Contact",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/scifi-book01.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Contact-Snap-Case-Jodie-Foster/dp/0790733226",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.imdb.com/title/tt0118884/",
+                "linktext": "Movie Info"
+              }
+            }
+          },
+          "book02": {
+            "text": "The Three-Body Problem",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/scifi-book02.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Three-Body-Problem-Cixin-Liu/dp/0765382032",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.netflix.com/title/81024821",
+                "linktext": "Netflix"
+              }
+            }
+          }
+        }
+      },
+      "comics": {
+        "result": {
+          "book01": {
+            "text": "Alice Academy",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/comic-book01.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Alice-academy-Vol-Tachibana-Higuchi/dp/8867121294",
+                "linktext": "Buy this comic!"
+              }
+            }
+          },
+          "book02": {
+            "text": "Frieren: Beyond Journey's End",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/comic-book02.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Frieren-T05-Kanehito-Yamada/dp/B09ND1RPTT",
+                "linktext": "Buy this comic!"
+              }
+            }
+          }
+        }
+      },
+      "others": {
+        "result": {
+          "book01": {
+            "text": "Atomic Habits",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/others-book01.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/1847941842",
+                "linktext": "Buy this comic!"
+              }
+            }
+          },
+          "book02": {
+            "text": "Poor Charlie's Almanack",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/others-book02.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Poor-Charlies-Almanack-Essential-Charles/dp/1953953239",
+                "linktext": "Buy this book!"
+              }
+            }
+          },
+          "book03": {
+            "text": "Voices from Chernobyl",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/others-book03.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Voices-Chernobyl-History-Nuclear-Disaster/dp/1564784010",
+                "linktext": "Buy this book!"
+              },
+              "link2": {
+                "href": "https://www.youtube.com/watch?v=MVGoDAb5Jqo&ab_channel=GIANCARLOPRADO",
+                "linktext": "The Battle of Chernobyl - Documentary"
+              }
+            }
+          },
+          "book04": {
+            "text": "The Cove",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/others-book04.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Cove-Richard-OBarry/dp/B002PLMJ74",
+                "linktext": "Buy this book!"
+              }
+            }
+          },
+          "book05": {
+            "text": "The Fifth Risk",
+            "desc": "Desc",
+            "img": { "src": "./assets/img/others-book05.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.amazon.com/Fifth-Risk-Michael-Lewis/dp/1324002646",
+                "linktext": "Buy this book!"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
