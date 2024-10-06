@@ -270,7 +270,10 @@ function formValid() {
     }
 
     // if the type setting is "email", check whether the value is in email format
-    if (settingData[key].input.type === "email") {
+    if (
+      settingData[key].input.type === "email" &&
+      (settingData[key].require || data.value)
+    ) {
       const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
       // test() -> test for a match in a string
