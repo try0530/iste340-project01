@@ -32,9 +32,6 @@ async function createView() {
   formData = await fetchData("./assets/json/form.json");
   resultData = await fetchData("./assets/json/result.json");
 
-  // console.log(resultData.indoor.book.comics.result);
-  // printResults();
-
   // create title
   const divElement = document.createElement("div");
   divElement.setAttribute("id", "questions");
