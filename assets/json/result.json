@@ -3,16 +3,36 @@
     "mountain": {
       "chill": {
         "result": {
-          "trail": { "text": "trail", "desc": "Desc" },
-          "horseriding": { "text": "Horse Riding", "desc": "DESC" }
+          "trail": { "text": "Trail", "desc": "Desc" },
+          "horseriding": {
+            "text": "Horseback Riding",
+            "desc": "Breathe in the fresh air and breathtaking views on gentle horses.Horseback riding on a trail offers a peaceful yet invigorating connection with both nature and the horse. As you follow winding paths through forests or open fields, the rhythm of the horse’s movements and the sound of its hooves create a soothing cadence. The fresh air carries the scent of wildflowers and pine, with sunlight filtering through the trees. You might pause at scenic overlooks, taking in breathtaking views while feeling a sense of unity with the horse beneath you.",
+            "img": { "src": "./assets/img/horseback-riding.jpg" },
+            "link": {
+              "link1": {
+                "href": "https://www.tripadvisor.com/Attractions-g1480313-Activities-c61-t62-Finger_Lakes_New_York.html",
+                "linktext": "10 Horseback Riding Options!"
+              }
+            }
+          }
         }
       },
       "advanced": {
         "result": {
-          "hiking": { "text": "hiking" },
+          "hiking": {
+            "text": "Hiking",
+            "desc": "Hiking involves tackling challenging trails with steep elevations, rugged terrains, and often unpredictable weather conditions. Hikers need to have strong endurance, navigational skills, and the ability to manage technical gear like ropes or crampons in certain situations. These hikes often take place in remote, high-altitude areas and may require multi-day planning with camping equipment. It is a physically and mentally demanding activity, suitable for experienced adventurers seeking to push their limits in nature.",
+            "link": {
+              "link1": {
+                "href": "https://www.alltrails.com/us/new-york/rochester",
+                "linktext": "Recommend Trails"
+              }
+            }
+          },
           "rockclimbing": {
-            "text": "rock climbing",
-            "img": { "src": "./assets/img/rock-climbing.jpeg" }
+            "text": "Rock Climbing",
+            "img": { "src": "./assets/img/rock-climbing.jpeg" },
+            "desc": "Rock climbing is a physically demanding sport that involves ascending natural rock formations or artificial climbing walls using strength, technique, and specialized equipment. Climbers rely on harnesses, ropes, and protective gear to ensure safety while navigating vertical or overhanging routes. The sport requires a combination of upper body strength, flexibility, balance, and mental focus to solve complex climbing problems. Whether done outdoors on cliffs or indoors on climbing walls, it offers a thrilling challenge and a sense of accomplishment."
           }
         }
       }
@@ -22,23 +42,46 @@
         "result": {
           "scuba": {
             "text": "Scuba Diving",
-            "desc": "Desc",
+            "desc": "Scuba diving is an underwater adventure where divers use specialized breathing equipment to explore the depths of oceans, lakes, or other bodies of water. Equipped with a tank of compressed air, divers can swim freely beneath the surface for extended periods, observing marine life, coral reefs, and shipwrecks. It requires proper training in techniques like buoyancy control, underwater navigation, and safety protocols to handle potential risks such as depth and pressure changes. Scuba diving offers a unique opportunity to experience the serene, weightless world beneath the waves, fostering a deep connection with aquatic ecosystems.",
             "img": { "src": "./assets/img/scubadiving.jpeg" },
-            "link": {}
+            "link": {
+              "link1": {
+                "href": "https://www.padi.com/education/learn-to-dive",
+                "linktext": "PADI"
+              },
+              "link2": {
+                "href": "https://www.scubadiving.com/",
+                "linktext": "Scuba Magine"
+              }
+            }
           },
           "free": {
             "text": "Freediving",
-            "desc": "Desc",
+            "desc": "Freediving, free-diving, free diving, breath-hold diving, or skin diving, is a mode of underwater diving that relies on breath-holding until resurfacing rather than the use of breathing apparatus such as scuba gear.Besides the limits of breath-hold, immersion in water and exposure to high ambient pressure also have physiological effects that limit the depths and duration possible in freediving.",
             "img": {
               "src": "./assets/img/freediving.jpg"
             },
-            "link": {}
+            "link": {
+              "link1": {
+                "href": "https://www.padi.com/education/freediving",
+                "linktext": "PADI"
+              },
+              "link2": {
+                "href": "https://www.aidainternational.org/",
+                "linktext": "AIDA"
+              }
+            }
           },
           "sharkcage": {
             "text": "Shark Cage Diving",
-            "desc": "Desc",
+            "desc": "'Shark Cage Diving' is an engaging exploration of the thrilling and often misunderstood world of shark cage diving, offering insights into the practices and experiences surrounding this adrenaline-pumping adventure. The book takes readers on a journey to some of the most renowned shark diving locations, detailing the encounters with various shark species and the thrill of witnessing these magnificent creatures up close. Through firsthand accounts and expert interviews, it sheds light on the importance of conservation and understanding sharks' roles in marine ecosystems. Combining adventure, education, and a deep appreciation for the ocean's wonders, 'Shark Cage Diving' invites readers to reconsider their perceptions of sharks and the allure of diving with them.",
             "img": { "src": "./assets/img/shark-cage-diving.jpg" },
-            "link": {}
+            "link": {
+              "link1": {
+                "href": "https://www.bluewaterdivetravel.com/best-shark-cage-diving",
+                "linktext": "Places to Shark Cage Dive"
+              }
+            }
           }
         }
       },
@@ -46,21 +89,19 @@
         "result": {
           "surfing": {
             "text": "Surfing",
-            "desc": "Desc",
-            "img": { "src": "./assets/img/surfing.jpg" },
-            "link": {}
+            "desc": "Surfing is an exhilarating water sport where individuals ride ocean waves on a surfboard, harnessing the wave’s energy to glide towards the shore. It requires balance, agility, and timing to successfully paddle into waves and stand up while maintaining control on the board. Surfers need to develop an understanding of ocean conditions, such as wave patterns and tides, to navigate safely and efficiently. Both challenging and rewarding, surfing offers a unique blend of physical challenge and a deep connection to the rhythm of the sea.",
+            "img": { "src": "./assets/img/surfing.jpg" }
           },
           "skimboard": {
             "text": "Skimboard",
-            "desc": "Desc",
+            "desc": "Skimboarding is a dynamic water sport where riders use a small, thin board to glide across the shallow water at the shoreline or over waves. Unlike surfing, skimboarders start from the beach, running and dropping their board onto wet sand or shallow water before jumping on to ride. It requires quick reflexes, balance, and precise timing to maintain momentum and perform tricks or navigate small waves. Skimboarding offers a thrilling and fast-paced alternative to other board sports, blending elements of surfing and skateboarding in a coastal setting.",
             "img": { "src": "./assets/img/skimboarding.jpg" },
             "link": {}
           },
           "wakeboard": {
             "text": "Wake Board",
-            "desc": "Desc",
-            "img": { "src": "./assets/img/wakeboarding.jpg" },
-            "link": {}
+            "desc": "'Wake Boarding' is a comprehensive guide that explores the thrilling water sport of wakeboarding, where riders are towed behind a boat on a specially designed board. The book covers essential techniques, safety tips, and equipment needed for both beginners and experienced riders, providing insights into mastering jumps, tricks, and maneuvers. With detailed illustrations and step-by-step instructions, it aims to inspire enthusiasts to improve their skills and enjoy the exhilaration of gliding over water. Additionally, 'Wake Boarding' highlights the camaraderie and community surrounding the sport, celebrating the culture and lifestyle of wakeboarders.",
+            "img": { "src": "./assets/img/wakeboarding.jpg" }
           }
         }
       }
@@ -69,7 +110,7 @@
       "result": {
         "universal": {
           "text": "Universal Studio",
-          "desc": "Desc",
+          "desc": "Universal Studios is a renowned theme park and entertainment complex offering immersive experiences based on popular films and TV shows. Visitors can enjoy thrilling rides, live shows, and interactive attractions that bring iconic movies like Jurassic Park, Harry Potter, and Transformers to life. The park also features behind-the-scenes tours of real working film studios, giving guests a glimpse into Hollywood's moviemaking magic. Combining entertainment, adventure, and cinematic wonder, Universal Studios provides a unique and exciting destination for families and fans of all ages.",
           "img": { "src": "./assets/img/universal-studio.jpg" },
           "link": {
             "link1": {
@@ -84,7 +125,7 @@
         },
         "disney": {
           "text": "Disneyland",
-          "desc": "Desc",
+          "desc": "Disneyland is a world-famous theme park that brings beloved Disney characters, stories, and fairy tales to life through magical rides and attractions. Known as 'The Happiest Place on Earth', it offers everything from thrilling roller coasters to family-friendly parades and character meet-and-greets. Each land within the park, like Fantasyland and Adventureland, is carefully themed to transport visitors into the worlds of iconic Disney films. With its enchanting atmosphere, live shows, and fireworks, Disneyland offers an unforgettable experience for people of all ages.",
           "img": { "src": "./assets/img/disneyland.jpg" },
           "link": {
             "link1": {
@@ -123,7 +164,7 @@
       "result": {
         "catcafe": {
           "text": "Cat Cafe",
-          "desc": "Desc",
+          "desc": "A cat café is a cozy, themed café where patrons can enjoy drinks or light snacks while interacting with friendly resident cats. These cafés provide a relaxed atmosphere for cat lovers to unwind, offering the chance to pet, play with, and observe cats in a comfortable environment. Many cat cafés also promote animal welfare, partnering with shelters to offer adoptable cats a home-like setting where visitors can meet potential pets. Combining the charm of a café with the joy of spending time with cats, it creates a unique and therapeutic experience for animal enthusiasts.",
           "img": { "src": "./assets/img/cat-cafe.jpeg" },
           "link": {
             "link1": {
@@ -138,9 +179,8 @@
         },
         "aquarium": {
           "text": "Aquarium",
-          "desc": "Desc",
-          "img": { "src": "./assets/img/aquarium.jpg" },
-          "link": {}
+          "desc": "An aquarium is a public facility where visitors can explore the underwater world through large tanks and exhibits showcasing marine life from oceans, rivers, and lakes. These exhibits often feature a variety of aquatic species, including fish, sharks, jellyfish, and coral reefs, offering an educational and visually captivating experience. Many aquariums also focus on conservation, providing information about marine ecosystems and efforts to protect endangered species. With interactive displays and sometimes touch pools, aquariums offer a unique opportunity to connect with the fascinating diversity of underwater environments.",
+          "img": { "src": "./assets/img/aquarium.jpg" }
         }
       }
     },
@@ -148,27 +188,51 @@
       "result": {
         "soap": {
           "text": "Soap",
-          "desc": "Desc",
+          "desc": "Handmade soap is crafted in small batches using natural ingredients like plant-based oils, essential oils, and herbs, resulting in a gentle and nourishing alternative to commercial soaps. Each bar is carefully made through traditional methods, such as cold or hot process, allowing for customization in scent, color, and texture. Unlike mass-produced soaps, handmade varieties often exclude harsh chemicals and synthetic additives, making them ideal for sensitive skin. These artisanal soaps offer a unique blend of creativity and skincare, combining beauty and functionality with eco-friendly benefits.",
           "img": { "src": "./assets/img/handmade-soap.jpeg" },
-          "link": {}
+          "link": {
+            "link1": {
+              "href": "https://www.thesprucecrafts.com/how-to-make-soap-517084",
+              "linktext": "Tutorial"
+            }
+          }
         },
         "candle": {
           "text": "Candle",
-          "desc": "Desc",
+          "desc": "Handmade candles are crafted with care using high-quality waxes, essential oils, and natural additives, resulting in unique scents and designs that reflect individual creativity. Each candle is often poured by hand, allowing artisans to customize shapes, colors, and fragrances to create a personal touch. Unlike mass-produced candles, handmade varieties are typically free from harmful additives, making them a healthier choice for indoor air quality. These candles not only provide soothing light and delightful aromas but also serve as beautiful decor pieces, enhancing the ambiance of any space.",
           "img": { "src": "./assets/img/handmade-candle.jpeg" },
-          "link": {}
+          "link": {
+            "link1": {
+              "href": "https://www.candlescience.com/learn-candle-making/?srsltid=AfmBOoqOPuTymAtew2IbWyXIlx_7w4k0O_8sOUeQi4mL5tkMSpZzE4os",
+              "linktext": "Tutorial"
+            }
+          }
         },
         "bracelet": {
           "text": "Bracelet",
-          "desc": "Desc",
+          "desc": "Handmade bracelets are unique accessories crafted by artisans using a variety of materials such as beads, metals, leather, and natural fibers. Each bracelet is often designed with attention to detail, allowing for personalization in style, color, and texture to reflect the wearer's individual taste. Unlike mass-produced jewelry, handmade bracelets often carry a story, connecting the wearer to the craftsmanship and creativity involved in their creation. These bracelets make meaningful gifts or stylish additions to any outfit, embodying both artistry and personal expression.",
           "img": { "src": "./assets/img/handmade-bracelet.jpg" },
-          "link": {}
+          "link": {
+            "link1": {
+              "href": "https://www.braceletbook.com/patterns/",
+              "linktext": "Bracelet Pattern"
+            }
+          }
         },
         "knitting": {
           "text": "Knitting",
-          "desc": "Desc",
+          "desc": "Handmade knitting is a creative process where artisans craft unique textiles by interlocking yarn with needles, resulting in a wide range of products such as clothing, accessories, and home décor. Each piece reflects the individual knitter's skill and style, showcasing various techniques, patterns, and colors that bring warmth and character to the final product. Unlike mass-produced items, handmade knitted goods often carry a personal touch, making them special gifts or cherished heirlooms. This timeless craft not only promotes sustainability by using natural fibers but also fosters a sense of community among knitters and enthusiasts who share their passion for creating.",
           "img": { "src": "./assets/img/handmade-knitting.jpeg" },
-          "link": {}
+          "link": {
+            "link1": {
+              "href": "https://sheepandstitch.com/how-to-knit/",
+              "linktext": "Tutorial"
+            },
+            "link2": {
+              "href": "https://knitting.com/",
+              "linktext": "Tutorial2"
+            }
+          }
         }
       }
     },
@@ -177,7 +241,7 @@
         "result": {
           "book01": {
             "text": "I want to Eat Your Pancreas",
-            "desc": "Desc",
+            "desc": "'I Want to Eat Your Pancreas' is a poignant Japanese novel by Yoru Sumino that explores themes of life, death, and human connection through the story of a terminally ill girl named Sakura Yamauchi. The narrative unfolds through the perspective of an introverted boy who stumbles upon her secret diary, revealing her struggles with a pancreatic illness and her desire to live life to the fullest despite her condition. As their unlikely friendship develops, the book delves into the complexities of emotions, the significance of relationships, and the impact of mortality on everyday life. With its blend of humor and heartache, the novel offers a moving reflection on the fleeting nature of existence and the importance of cherishing every moment.",
             "img": { "src": "./assets/img/book01.jpg" },
             "link": {
               "link1": {
@@ -192,7 +256,7 @@
           },
           "book02": {
             "text": "I Had That Same Dream Again",
-            "desc": "Desc",
+            "desc": "'I Had That Same Dream Again' is a captivating Japanese novel by Yoru Sumino that intertwines the themes of dreams, reality, and self-discovery. The story follows a high school girl named Kayo who, plagued by recurring dreams, grapples with her identity and the choices that shape her life. As she navigates the complexities of adolescence, relationships, and her aspirations, Kayo encounters various characters who influence her journey and challenge her perceptions of reality. Through its evocative narrative and poignant exploration of personal growth, the novel highlights the significance of dreams as both a reflection of inner desires and a catalyst for change.",
             "img": { "src": "./assets/img/book02.jpg" },
             "link": {
               "link1": {
@@ -203,7 +267,7 @@
           },
           "book03": {
             "text": "Wood Job!",
-            "desc": "Desc",
+            "desc": "'Wood Job!' is a heartwarming Japanese novel by Akiyuki Nosaka that follows the story of a young man named Tetsuro who decides to escape the pressures of urban life by taking a job in a rural forestry program. Initially reluctant and ill-prepared, Tetsuro embarks on a journey of self-discovery as he learns the intricacies of woodwork and the value of hard labor alongside a group of eccentric yet endearing coworkers. Through his experiences in the forest, he develops a deep appreciation for nature, craftsmanship, and the simple joys of life, while also navigating relationships and personal growth. Blending humor and introspection, the novel captures the transformative power of embracing new challenges and the profound connections formed in the process.",
             "img": { "src": "./assets/img/book03.jpg" },
             "link": {
               "link1": {
@@ -218,7 +282,7 @@
           },
           "book04": {
             "text": "My Sister's Keeper",
-            "desc": "Desc",
+            "desc": "'My Sister's Keeper' is a thought-provoking novel by Jodi Picoult that revolves around the complex ethical dilemmas faced by the Fitzgerald family, particularly focusing on Anna, a young girl conceived to be a genetic match for her older sister, Kate, who is suffering from leukemia. As Anna grows up, she begins to question her role in her sister's life and the emotional toll it takes on her own identity, leading her to seek medical emancipation from her parents. The narrative explores themes of family loyalty, moral conflict, and the boundaries of love as the characters grapple with the consequences of their decisions. With its compelling storytelling and multifaceted characters, the novel challenges readers to consider the complexities of life, illness, and the definitions of being a 'good' sister.",
             "img": { "src": "./assets/img/book04.jpg" },
             "link": {
               "link1": {
@@ -237,7 +301,7 @@
         "result": {
           "book01": {
             "text": "Dune",
-            "desc": "Desc",
+            "desc": "'Dune' is a science fiction epic by Frank Herbert that unfolds on the desert planet of Arrakis, a vital source of the universe's most valuable substance, spice melange. The story follows young Paul Atreides, heir to the noble House Atreides, as he navigates political intrigue, betrayal, and the harsh realities of life on Arrakis after his family is plunged into conflict with rival houses. As Paul grapples with his destiny, he discovers his connection to the native Fremen people and their deep reverence for the planet's ecology and culture. Blending themes of power, prophecy, and environmentalism, 'Dune' is a rich tapestry of complex characters and intricate world-building that has captivated readers for generations.",
             "img": { "src": "./assets/img/fantasy-book01.jpg" },
             "link": {
               "link1": {
@@ -260,7 +324,7 @@
         "result": {
           "book01": {
             "text": "Agatha Christie Novels",
-            "desc": "Desc",
+            "desc": "Agatha Christie is one of the most celebrated mystery writers of all time, renowned for her intricate plots and unforgettable characters, including the iconic detectives Hercule Poirot and Miss Marple. Her novels often feature clever twists and red herrings, keeping readers guessing until the very last page as they unravel murder mysteries set in charming yet sinister settings. With titles such as 'Murder on the Orient Express' and 'And Then There Were None,' Christie skillfully combines suspense with insightful observations on human nature and societal norms. Her contributions to the genre have solidified her legacy, making her works timeless classics that continue to captivate mystery enthusiasts around the world.",
             "img": { "src": "./assets/img/mystery-book01.jpg" },
             "link": {
               "link1": {
@@ -275,7 +339,7 @@
           },
           "book02": {
             "text": "Millennium",
-            "desc": "Desc",
+            "desc": "'Millennium' is a gripping thriller series by Swedish author Stieg Larsson, beginning with the first novel, 'The Girl with the Dragon Tattoo.' The story follows investigative journalist Mikael Blomkvist and the enigmatic hacker Lisbeth Salander as they delve into a decades-old mystery involving the disappearance of a wealthy industrialist's niece. As they uncover dark secrets within a powerful family, the narrative weaves together themes of corruption, misogyny, and personal redemption, highlighting the struggles faced by its complex characters. Known for its intricate plot and social commentary, 'Millennium' has captivated readers worldwide, spawning adaptations and further sequels that explore the interplay of technology, crime, and justice.",
             "img": { "src": "./assets/img/mystery-book02.jpg" },
             "link": {
               "link1": {
@@ -290,7 +354,7 @@
           },
           "book03": {
             "text": "Skumtimmen",
-            "desc": "Desc",
+            "desc": "'Skumtimmen,' known as 'The Twilight Hour,' is a gripping Swedish novel by Johan Theorin that weaves together themes of mystery and family secrets against the haunting backdrop of the island of Öland. The story follows the protagonist, a man named Jónas, who returns to his childhood home after the death of his father, only to be drawn into a series of eerie occurrences linked to the island's dark past. As Jónas delves deeper into the enigmatic events surrounding his family, he uncovers unsettling truths about his father’s history and the island's folklore. With its atmospheric setting and compelling narrative, 'Skumtimmen' captivates readers with its blend of psychological depth and suspenseful storytelling.",
             "img": { "src": "./assets/img/mystery-book03.jpg" },
             "link": {
               "link1": {
@@ -305,7 +369,7 @@
           },
           "book04": {
             "text": "Where the Crawdads Sing",
-            "desc": "Desc",
+            "desc": "'Where the Crawdads Sing' is a poignant coming-of-age novel by Delia Owens that intertwines themes of isolation, resilience, and the beauty of nature. Set in the marshes of North Carolina, the story follows Kya Clark, a young girl abandoned by her family, who learns to survive alone in the wild and becomes deeply connected to the natural world around her. As Kya grows up, she becomes embroiled in a murder investigation when a local man is found dead, and the community's judgment intensifies against her due to her reclusive lifestyle. Through lyrical prose and rich character development, the novel explores the complexities of love, loneliness, and the search for belonging, ultimately revealing the strength of the human spirit.",
             "img": { "src": "./assets/img/mystery-book04.jpg" },
             "link": {
               "link1": {
@@ -324,7 +388,7 @@
         "result": {
           "book01": {
             "text": "Contact",
-            "desc": "Desc",
+            "desc": "'Contact' is a thought-provoking science fiction novel by Carl Sagan that explores humanity's quest for extraterrestrial life and the implications of first contact. The story follows Dr. Ellie Arroway, a passionate astronomer who discovers a signal from a distant civilization, containing blueprints for constructing a mysterious machine. As Ellie and her team work to decode the message and understand its purpose, they face political, religious, and scientific challenges that test their beliefs and convictions. Blending science, philosophy, and human emotion, 'Contact' raises profound questions about the nature of existence, the universe, and the search for meaning beyond our planet.",
             "img": { "src": "./assets/img/scifi-book01.jpg" },
             "link": {
               "link1": {
@@ -339,7 +403,7 @@
           },
           "book02": {
             "text": "The Three-Body Problem",
-            "desc": "Desc",
+            "desc": "'The Three-Body Problem' is a groundbreaking science fiction novel by Chinese author Liu Cixin that explores the complexities of first contact with an alien civilization. The story begins during China's Cultural Revolution, where a secret military project inadvertently establishes communication with the Trisolaran civilization, facing a dire future due to their planet's unstable three-sun system. As the narrative unfolds, it follows various characters, including physicist Ye Wenjie and nanomaterials researcher Wang Miao, as they grapple with the implications of this contact and the potential consequences for humanity. Combining hard science with philosophical questions about civilization, morality, and existential risk, 'The Three-Body Problem' challenges readers to ponder humanity's place in the universe.",
             "img": { "src": "./assets/img/scifi-book02.jpg" },
             "link": {
               "link1": {
@@ -358,7 +422,7 @@
         "result": {
           "book01": {
             "text": "Alice Academy",
-            "desc": "Desc",
+            "desc": "'Alice Academy' is a captivating manga series written and illustrated by Tachibana Higuchi, set in a school for gifted children known as the Alice Academy. The story follows a young girl named Mikan Sakura, who enrolls at the academy to be with her best friend, Anna, only to discover that she possesses a unique ability, known as an 'Alice.' As Mikan navigates the challenges of her new environment, she encounters various students with extraordinary powers and learns about the mysteries and dangers associated with the academy. Through its blend of adventure, friendship, and magical elements, 'Alice Academy' explores themes of self-discovery and the importance of acceptance in a world that often fears differences.",
             "img": { "src": "./assets/img/comic-book01.jpg" },
             "link": {
               "link1": {
@@ -369,7 +433,7 @@
           },
           "book02": {
             "text": "Frieren: Beyond Journey's End",
-            "desc": "Desc",
+            "desc": "'Frieren: Beyond Journey's End' is a captivating manga series written by Kanehito Yamada and illustrated by Tsukasa Abe, following the story of Frieren, an elven mage who was part of a legendary hero's party that defeated the Demon King. After the hero’s journey comes to an end, Frieren grapples with the concept of time and mortality, reflecting on her long life while her companions age and pass away. Determined to understand human emotions and forge meaningful connections, she embarks on a journey to visit the places and people her party encountered, seeking to honor their memories. With its poignant exploration of friendship, loss, and the passage of time, 'Frieren' offers a fresh perspective on the aftermath of epic adventures and the enduring bonds that shape our lives.",
             "img": { "src": "./assets/img/comic-book02.jpg" },
             "link": {
               "link1": {
@@ -384,7 +448,7 @@
         "result": {
           "book01": {
             "text": "Atomic Habits",
-            "desc": "Desc",
+            "desc": "'Atomic Habits' by James Clear is a practical guide that delves into the science of habit formation and the power of small changes in achieving remarkable results. The book emphasizes the idea that improving by just 1% each day can lead to significant personal and professional transformation over time. Clear introduces a framework based on the Four Laws of Behavior Change—cue, craving, response, and reward—providing actionable strategies for building good habits and breaking bad ones. With engaging anecdotes and evidence-based insights, 'Atomic Habits' inspires readers to take control of their habits, ultimately leading to a more fulfilling and productive life.",
             "img": { "src": "./assets/img/others-book01.jpg" },
             "link": {
               "link1": {
@@ -395,7 +459,7 @@
           },
           "book02": {
             "text": "Poor Charlie's Almanack",
-            "desc": "Desc",
+            "desc": "'Poor Charlie's Almanack' is a compilation of wisdom and insights from Charles T. Munger, the vice chairman of Berkshire Hathaway and a renowned investor and philanthropist. The book, edited by Peter D. Kaufman, features a blend of Munger's speeches, writings, and life lessons, emphasizing the importance of multidisciplinary thinking and the value of lifelong learning. With a focus on rational decision-making, investing principles, and practical advice for personal and professional growth, Munger shares his unique perspective on success and happiness. Richly illustrated and filled with anecdotes, 'Poor Charlie's Almanack' serves as both an inspirational guide and a thoughtful reflection on the principles that have shaped Munger's remarkable career.",
             "img": { "src": "./assets/img/others-book02.jpg" },
             "link": {
               "link1": {
@@ -406,7 +470,7 @@
           },
           "book03": {
             "text": "Voices from Chernobyl",
-            "desc": "Desc",
+            "desc": "'Voices from Chernobyl' is a haunting oral history by Nobel laureate Svetlana Alexievich that captures the profound human impact of the Chernobyl nuclear disaster. Through interviews with survivors—including firefighters, evacuees, soldiers, and scientists—Alexievich weaves together personal stories that reveal the emotional and psychological toll of the catastrophe on those affected. The narrative delves into themes of fear, loss, and resilience, offering a poignant reflection on the consequences of technological failure and the fragility of life. With its raw and powerful accounts, 'Voices from Chernobyl' serves as both a tribute to the resilience of the human spirit and a stark reminder of the long-lasting effects of nuclear disaster.",
             "img": { "src": "./assets/img/others-book03.jpg" },
             "link": {
               "link1": {
@@ -421,7 +485,7 @@
           },
           "book04": {
             "text": "The Cove",
-            "desc": "Desc",
+            "desc": "'The Cove' is a poignant novel by Ron Rash that unfolds during World War I in a remote Appalachian valley, where a young woman named Laurel lives a secluded life, shunned by society due to her family's dark past. When a mysterious outsider named Walter appears in the cove, Laurel's life begins to change as they develop a deep connection, igniting hope and desire amidst the shadows of prejudice and suspicion. However, their relationship becomes complicated as the war looms and secrets from the past threaten to unravel their fragile happiness. Through its lyrical prose and richly drawn characters, 'The Cove' explores themes of love, isolation, and the enduring impact of history on personal lives.",
             "img": { "src": "./assets/img/others-book04.jpg" },
             "link": {
               "link1": {
@@ -432,7 +496,7 @@
           },
           "book05": {
             "text": "The Fifth Risk",
-            "desc": "Desc",
+            "desc": "'The Fifth Risk' by Michael Lewis is a compelling exploration of the risks and uncertainties facing the U.S. government, particularly in the wake of the 2016 presidential election. The book delves into the often-overlooked work of federal agencies and the dedicated civil servants who manage critical issues, such as climate change, nuclear safety, and public health. Through vivid storytelling and meticulous research, Lewis highlights the potential consequences of neglecting these vital functions and the dangers of underestimating the complexities of governance. With its timely insights, 'The Fifth Risk' serves as a sobering reminder of the importance of informed leadership and the responsibilities inherent in managing a nation's welfare.",
             "img": { "src": "./assets/img/others-book05.jpg" },
             "link": {
               "link1": {

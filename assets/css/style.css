@@ -7,19 +7,23 @@
   --color-03: #babde2;
   --color-04: #895159;
   --color-05: #dfaea1;
+
+  --result-color-01: #f9c8c2;
+  --result-color-02: #c69491;
+  --result-color-03: #96aca0;
+  --result-color-04: #7d9094;
+  --result-color-05: #f5cd62;
 }
 
 * {
   margin: 0;
   padding: 0;
-  background-color: var(--color-02);
   font-family: "Titillium Web", "Nunito", sans-serif;
   /* border: 1px solid black; */
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-color: var(--color-02);
 }
 
 ul {
@@ -34,6 +38,27 @@ img {
   width: 100%;
   height: auto;
 }
+
+/****** Main Div & Other Div Settings ********/
+#main-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#main-div,
+#other-div {
+  margin: 1rem;
+}
+
+#other-div {
+  display: flex;
+  justify-content: center;
+}
+
+#again-btn {
+  cursor: pointer;
+}
+/****** Main Div & Other Div Settings ********/
 
 /****** Questions Settings Begin *******/
 select,
@@ -129,7 +154,6 @@ option {
 }
 
 #form-submit:active {
-  transform: scale(1.2);
   color: var(--color-02);
   background-color: var(--color-04);
   box-shadow: 0 1px;
@@ -151,31 +175,18 @@ option {
 }
 /* form validation error setting end */
 
-/* result setting start */
+/****** result setting start ******/
 #result {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-
-/* 
-#result-detail::before {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: 95%;
-  height: 90%;
-  border: 2px dashed var(--color-05);
-  box-sizing: border-box;
-  pointer-events: none;
-  border-radius: 10px;
-} */
 
 #result-detail {
   width: 85%;
+  background-color: var(--result-color-01);
   margin-top: 1rem;
-  border: 2px solid var(--color-05);
   padding: 1rem;
   border-radius: 16px;
 }
@@ -183,35 +194,54 @@ option {
 #result-basic-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+#selected-list-div {
+  border: 2px solid var(--result-color-03);
+  margin: 0.5rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+#selected-list-div::before {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--result-color-05);
+  width: 100%;
+  height: calc(100% + 3px);
+  border-radius: 16px;
+  top: -9px;
+  left: -12px;
+}
+
+#selected-list-div h3 {
+  padding: 0 1rem;
+  text-decoration: underline;
+  text-decoration-color: var(--result-color-04);
+  position: relative;
+  border-radius: 8px;
 }
 
 #selected-list-ul li {
   text-align: center;
 }
 
-#selected-list-div {
-  border: 2px solid var(--color-05);
-  margin: 0.5rem;
-  border-radius: 4px;
-}
-
-#selected-list-div h3 {
-  padding: 0 1rem;
-  text-decoration: underline;
-  text-decoration-color: var(--color-04);
-}
-
 #result-recommend {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dotted var(--color-03);
+  background-color: var(--result-color-04);
+  border-radius: 16px;
+  position: relative;
 }
 
 #result-recommend p {
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0.5rem;
+  color: var(--color-02);
+  z-index: 1;
 }
 
 #recommend-description {
@@ -246,21 +276,81 @@ option {
   text-align: center;
 }
 
-#recommend-other-details button {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  background-color: var(--color-01);
-  color: var(--color-02);
-  border-radius: 8px;
-  text-align: center;
-  border: 0;
+#other-links a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: var(--result-color-05);
+  box-shadow: 0 3px;
+  font-weight: 700;
+}
+
+#other-links a:active {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: var(--result-color-05);
+  box-shadow: 0 1px;
+  transform: translateY(4px);
+  font-weight: 700;
 }
 
 /* result setting end */
 
+/* other div */
+#again-btn {
+  background-color: var(--result-color-05);
+  padding: 1rem;
+  border: 0;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+#again-btn:hover {
+  background-color: var(--result-color-01);
+  border: 1px solid var(--result-color-02);
+  box-shadow: 0 3px;
+}
+
+#again-btn:active {
+  background-color: var(--result-color-01);
+  border: 1px solid var(--result-color-02);
+  transform: translateY(4px);
+  box-shadow: 0 1px;
+}
+/* other div */
+
+/**  Error Page **/
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#error-page p {
+  margin: 1.5rem;
+  font-weight: 700;
+}
+
+#back-btn {
+  padding: 1rem;
+  border-radius: 16px;
+  border: 0;
+  background-color: var(--color-01);
+  color: var(--color-02);
+}
+
+#back-btn:hover {
+  background-color: var(--color-04);
+  box-shadow: 0 3px;
+}
+
+#back-btn:active {
+  background-color: var(--color-04);
+  transform: translateY(4px);
+  box-shadow: 0 1px;
+}
+/**  Error Page **/
+
 /* mobile */
 @media only screen and (max-width: 768px) {
-  body {
+  #main-div {
     display: flex;
     flex-direction: column;
   }

@@ -1,4 +1,11 @@
+// store the data from json
 let questionsData, formData, resultData;
+
+// store the data from interface
+let answerStore, formStore;
+
+// error message
+var errorMsg;
 
 // init
 function init() {
@@ -21,7 +28,9 @@ async function fetchData(file) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error Fetching JSON: ", error);
+    errorMsg = `Met Some Problem While Looking for the File ${file}`;
+    storeErrorMsg(errorMsg);
+    window.location.href = "/error-page.html";
   }
 }
 /***************** Fetch Data Functions *************** */
@@ -32,24 +41,53 @@ async function createView() {
   formData = await fetchData("./assets/json/form.json");
   resultData = await fetchData("./assets/json/result.json");
 
+  // create main div
+  const mainDivEle = document.createElement("div");
+  mainDivEle.setAttribute("id", "main-div");
+  document.getElementsByTagName("body")[0].appendChild(mainDivEle);
+
+  const mainDiv = document.getElementById("main-div");
+
   // create title
   const divElement = document.createElement("div");
   divElement.setAttribute("id", "questions");
-  document.getElementsByTagName("body")[0].appendChild(divElement);
+  mainDiv.appendChild(divElement);
 
   const questionTitle = document.createElement("h2");
   const textNode = document.createTextNode(questionsData.title);
   questionTitle.appendChild(textNode);
   document.getElementById("questions").appendChild(questionTitle);
 
-  createSelect("q1");
+  const existsData = getData("questions");
+
+  // check whether there is exists data, if does, write the exists data into it.
+  if (existsData) {
+    const keys = Object.keys(existsData);
+    keys.forEach((key, index) => {
+      createSelect(key, existsData[key]);
+      const next = findNextByValue(existsData[key]);
+
+      // if there is no existsData and next is null, createform
+      if (next === null) {
+        createUserForm();
+      }
+
+      // if there is no existsData but next is not null
+      if (index === keys.length - 1 && next) {
+        createSelect(next);
+      }
+    });
+  } else {
+    createSelect("q1");
+  }
+
+  createAgainBtn();
 }
 /***************** Create the View  *********************/
 
 /**************** Select Functions ******************** */
-
 // function for create new select section
-function createSelect(selectedQuestion) {
+function createSelect(selectedQuestion, value = null) {
   // if there is no more question, then don't create new question div
   if (selectedQuestion === null) {
     return;
@@ -83,12 +121,13 @@ function createSelect(selectedQuestion) {
   const elementSelection = document.createElement("select");
   elementSelection.setAttribute("name", dataSelected.id);
   elementSelection.setAttribute("id", dataSelected.id);
-  // 這個需要改別的寫法
   elementSelection.setAttribute(
     "onchange",
     "changeSelect(this.id, this.value)"
   );
-  elementSelection.textContent = dataSelected.question;
+
+  const textNodeSelection = document.createTextNode(dataSelected.question);
+  elementSelection.appendChild(textNodeSelection);
   document
     .getElementById(`question-block-${dataSelected.id}`)
     .appendChild(elementSelection);
@@ -100,6 +139,11 @@ function createSelect(selectedQuestion) {
     const elementOption = document.createElement("option");
     elementOption.value = dataSelected.options[key].value;
     elementOption.text = dataSelected.options[key].text;
+
+    if (value && value === dataSelected.options[key].value) {
+      elementOption.selected = true;
+      oldData = true;
+    }
 
     // show on the website
     document.getElementById(dataSelected.id).appendChild(elementOption);
@@ -136,11 +180,20 @@ function changeSelect(id, value) {
 
   // if the select div doesn't have any relative question exists, and the select option has next question
   if (!removeIds) {
+    // store the recent data
+    const selectData = getInterfaceData("questions");
+    storeData("questions", selectData);
+
     if (value !== "default") {
       createSelect(next);
     }
   } else {
     removeSelect(id);
+
+    // store the resent data
+    const selectData = getInterfaceData("questions");
+    storeData("questions", selectData);
+
     if (value !== "default") {
       // create new select base on the select value
       createSelect(next);
@@ -221,10 +274,17 @@ function createUserForm() {
   const formInputs = document.querySelectorAll("#user-form input");
   // listen when the mouse into the form input
   formInputs.forEach(function (input) {
+    // remove the classname when user enter the block
     input.addEventListener("mouseenter", function () {
       if (input.classList.contains("form-error")) {
         input.classList.remove("form-error");
       }
+    });
+
+    // store the interface data while user enter
+    input.addEventListener("input", function () {
+      const formStoreData = getInterfaceData("form");
+      storeData("form", formStoreData);
     });
   });
 
@@ -293,7 +353,7 @@ function formValid() {
 }
 
 /************* data store and get **********/
-// store form data into local storage
+// store data into local storage
 function storeData(type, data, time = 7) {
   // is the localStorage exists
   if (window.localStorage) {
@@ -310,7 +370,7 @@ function storeData(type, data, time = 7) {
       JSON.stringify(data) +
       "; expires=" +
       date.toUTCString +
-      "; path=../; HTTPOnly; SameSite=None; secure; domain=rit.edu";
+      "; path=/; HTTPOnly; SameSite=None; secure; domain=rit.edu";
   }
 }
 
@@ -321,7 +381,6 @@ function getData(type, id) {
     // if ask for the specific id result, give the resultData[id] else return resultData
     result = resultData ? (id ? resultData[id] : resultData) : null;
   } else {
-    console.log("cookie");
     // split all the cookie by ";"
     const cookieArray = document.cookie.split(";");
     const name = type + "=";
@@ -344,7 +403,59 @@ function getData(type, id) {
 
   return result;
 }
-/******************** Form functions ******************/
+
+// remove data base on the type
+function removeData(type = null, path, domain = "rit.edu") {
+  // is the localStorage exists
+  if (window.localStorage) {
+    if (type === null) {
+      localStorage.clear();
+    } else {
+      localStorage.removeItem(type);
+    }
+  } else {
+    // if the localStorage doesn't exists, use the cookies
+    document.cookie =
+      type +
+      "=" +
+      (path ? "; path=" + path : "") +
+      (domain ? "; domain=" + domain : "") +
+      "; expires=Thu, 01-Jan-70 00:00:01 GMT; SameSite=None; Secure;";
+  }
+}
+
+// get the data from the interface
+function getInterfaceData(type) {
+  let selectData = {};
+  let elements;
+
+  // if it is the question data
+  if (type === "questions") {
+    elements = document
+      .getElementById("questions")
+      .getElementsByTagName("select");
+  }
+
+  // if it is the form data
+  if (type === "form") {
+    elements = document
+      .getElementById("user-form")
+      .getElementsByTagName("input");
+  }
+
+  const elementsArray = Array.from(elements);
+
+  elementsArray.forEach((element) => {
+    const id = element.id;
+    const value = element.value;
+
+    selectData[id] = value;
+  });
+
+  return selectData;
+}
+
+/******************** data store and get ******************/
 
 /***************** Print Result ********************* */
 // print out the result
@@ -352,7 +463,7 @@ function printResults() {
   // create a div for result
   const resultDiv = document.createElement("div");
   resultDiv.setAttribute("id", "result");
-  document.getElementsByTagName("body")[0].appendChild(resultDiv);
+  document.getElementById("main-div").appendChild(resultDiv);
 
   const resultDivId = document.getElementById("result");
 
@@ -503,25 +614,6 @@ function printResults() {
       otherLinks.appendChild(linkEle);
     });
   }
-
-  const downloadButton = document.createElement("button");
-  const textNodeButton = document.createTextNode("Download Result");
-  downloadButton.setAttribute("id", "download");
-  downloadButton.appendChild(textNodeButton);
-  otherLinks.appendChild(downloadButton);
-
-  // using html2canvas allow user download the result as a picture
-  document.getElementById("download").addEventListener("click", () => {
-    html2canvas(document.getElementById("result-detail"), {
-      onrendered: function (canvas) {
-        // download img
-        const link = document.createElement("a");
-        link.href = canvas.toDataURL("image/png");
-        link.download = `${resultArray[result].text}.png`;
-        link.click();
-      },
-    });
-  });
 }
 
 // random recommendation
@@ -529,15 +621,13 @@ function giveRandomRecommendation(resultArray) {
   const keys = Object.keys(resultArray);
   // get a random number in the array length
   const random = Math.floor(Math.random() * keys.length);
-  console.log(random);
   // use the random number to get a recommendation
   const result = keys[random];
-  console.log(keys[random]);
 
   return result;
 }
 
-/***************** Pring Result ********************* */
+/***************** Print Result ********************* */
 
 /************* Animation ***********/
 // Selection animation
@@ -550,6 +640,7 @@ function moveIn(id) {
     requestAnimationFrame(() => moveIn(id));
   }
 }
+/************** Animation ************/
 
 /******** Event Listener ***********/
 // listen to the submit button
@@ -570,37 +661,15 @@ document.addEventListener("submit", function (e) {
 
   const questionsArray = Array.from(questions);
   // store all the questions answer
-  let selectData = {};
-
-  questionsArray.forEach((select) => {
-    const id = select.id;
-    const value = select.value;
-
-    selectData[id] = value;
-  });
+  let selectData = getInterfaceData("questions");
 
   storeData("questions", selectData);
 
   // store user form information
-  const inputInfo = document
-    .getElementById("user-form")
-    .getElementsByTagName("input");
-
-  const inputArray = Array.from(inputInfo);
-
-  let formData = {};
-
-  inputArray.forEach((input) => {
-    const id = input.id;
-    const value = input.value;
-
-    formData[id] = value;
-  });
-
+  let formData = getInterfaceData("form");
   storeData("form", formData);
 
   const resultDiv = document.getElementById("result");
-  console.log(resultDiv);
 
   if (resultDiv) {
     resultDiv.remove();
@@ -609,6 +678,7 @@ document.addEventListener("submit", function (e) {
 });
 
 /********** Other Function ************* */
+// using value to find the next question
 function findNextByValue(value) {
   let nextQuestion;
   for (const key in questionsData) {
@@ -622,4 +692,132 @@ function findNextByValue(value) {
 
   return nextQuestion;
 }
+
+// create try again button
+function createAgainBtn() {
+  // create div for other function
+  const againDiv = document.createElement("div");
+  againDiv.setAttribute("id", "other-div");
+  document.getElementsByTagName("body")[0].appendChild(againDiv);
+
+  // creae try again button
+  const againBtn = document.createElement("button");
+  const againTextNode = document.createTextNode("Try Again!");
+  againBtn.appendChild(againTextNode);
+  againBtn.setAttribute("id", "again-btn");
+
+  document.getElementById("other-div").appendChild(againBtn);
+
+  const againId = document.getElementById("again-btn");
+
+  // listen when it click
+  againId.addEventListener("click", function () {
+    removeData("questions");
+
+    // remove result
+    const resultDiv = document.getElementById("result");
+    if (resultDiv) {
+      resultDiv.remove();
+    }
+
+    // remove quesitons
+    const questionsDiv = document
+      .getElementById("questions")
+      .getElementsByTagName("div");
+
+    for (let i = questionsDiv.length; i--; i < 0) {
+      questionsDiv[i].remove();
+    }
+    createSelect("q1");
+  });
+}
 /************** Other Function ********************* */
+
+/************** Error Page ****************** */
+function createErrorPage() {
+  const divEle = document.createElement("div");
+  divEle.setAttribute("id", "error-page");
+
+  document.getElementsByTagName("body")[0].append(divEle);
+
+  const errorMsg = getErrorMsg();
+
+  // create error message
+  const errorMsgEle = document.createElement("p");
+  const errorMsgTextNode = document.createTextNode(errorMsg);
+  errorMsgEle.appendChild(errorMsgTextNode);
+  document.getElementById("error-page").append(errorMsgEle);
+
+  // create back to home page button
+  const backBtnEle = document.createElement("button");
+  const backTextNode = document.createTextNode("Back to Home Page");
+  backBtnEle.appendChild(backTextNode);
+  backBtnEle.setAttribute("id", "back-btn");
+  document.getElementById("error-page").appendChild(backBtnEle);
+
+  // back to home page button listener
+  const backBtn = document.getElementById("back-btn");
+  backBtn.addEventListener("click", function () {
+    removeErrorMsg();
+    window.location.href = "index.html";
+  });
+}
+
+function storeErrorMsg(msg, time = 7) {
+  // is the localStorage exists
+  // is the localStorage exists
+  if (window.localStorage) {
+    localStorage.setItem("errorMsg", JSON.stringify(msg));
+  } else {
+    // if the localStorage doesn't exists, use the cookies
+    const date = new Date();
+    date.setTime(date.getTime() + time * 24 * 60 * 60 * 1000);
+
+    // store the data into cookie
+    document.cookie =
+      type +
+      "=" +
+      JSON.stringify(msg) +
+      "; expires=" +
+      date.toUTCString +
+      "; path=/; HTTPOnly; SameSite=None; secure; domain=rit.edu";
+  }
+}
+
+function getErrorMsg() {
+  let msg;
+  if (window.localStorage) {
+    msg = JSON.parse(localStorage.getItem("errorMsg"));
+  } else {
+    // split all the cookie by ";"
+    const cookieArray = document.cookie.split(";");
+    const name = "error=";
+
+    // find which array is the one match to the type
+    for (let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i].trim();
+
+      // when the array data is the one we are looking for
+      if (cookie.indexOf(name) === 0) {
+        // get the data and change it into JSON format
+        msg = JSON.parse(cookie.substring(name.length, cookie.length));
+      }
+    }
+  }
+
+  return msg;
+}
+
+function removeErrorMsg(path, domain = "rit.edu") {
+  // is the localStorage exists
+  if (window.localStorage) {
+    localStorage.removeItem("errorMsg");
+  } else {
+    // if the localStorage doesn't exists, use the cookies
+    document.cookie =
+      "errorMsg=" +
+      (path ? "; path=" + path : "") +
+      (domain ? "; domain=" + domain : "") +
+      "; expires=Thu, 01-Jan-70 00:00:01 GMT; SameSite=None; Secure;";
+  }
+}
